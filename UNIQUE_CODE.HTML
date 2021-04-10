@@ -1,0 +1,77 @@
+<html>
+<head>
+<title> Verification of valid Password </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script>
+   <!--code for verifcation of password-->
+function verifyPassword() {
+  document.getElementById("demo").style.visibility="hidden";
+  document.getElementById("message").style.color="red";
+  var pw = document.getElementById("pswd").value;
+  if(pw == "") {
+     document.getElementById("message").innerHTML = "Fill the code please!";
+     return false;
+  }
+ 
+  if(pw.length > 4) {
+     document.getElementById("message").innerHTML = "Code Entered Is Invalid";
+     return false;
+  } if(pw.length ==4)
+      {
+  document.getElementById("message").innerHTML = "Code is verified!";
+  document.getElementById("message").style.color="green";
+  document.getElementById("demo").style.visibility="visible";
+  return false;
+}
+}
+</script>
+<style>
+    .previous {      
+            background-color:green;
+            color:white;
+            border: 2px solid black;
+            padding: 5px 10px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+            margin:50px 50px 50px 50px;
+            cursor: pointer;
+            font-family: 'Segoe UI';font-weight:bold;
+            letter-spacing: 2px;
+            
+        }
+    p{
+        font-weight:bold;
+         font-family:'Times New Roman';
+          margin-top: 15px;
+    }
+</style>
+</head>
+<body>
+<center>
+<h1 style="color:black; margin-top: 150px; font-family: 'Segoe UI';font-weight:bold;">UNIQUE CODE</h1>
+<form onsubmit ="return verifyPassword()">
+<!-- Enter Password -->
+<p> Enter 4 digit unique code: <input type = "password" id = "pswd" value = ""> </p>
+<span id = "message" style="color:red; font-family: 'Segoe UI';font-weight:bold; font-size:30px;"> </span> <br><br>
+
+<!-- Click to verify valid password -->
+<button style="font-family: 'Segoe UI';font-weight:bold; font-size:15px;" >Submit</button>
+<!-- Click to reset fields -->
+<button type = "reset" value = "Reset" style="font-family: 'Segoe UI';font-weight:bold; font-size:15px;"  >Reset</button><br>
+<!-- Click for payment-->
+<button id="demo" value="verifyPassword()" style="visibility:hidden; font-family: 'Segoe UI';font-weight:bold; font-size:15px; margin-top:10px; text-color:black;" 
+onclick="window.location.href = 'file:///C:/Users/Shivangi/Desktop/htmll/QR CODE.html';">PAYMENT</a></button>
+</form>
+<button class="previous" onclick="window.location.href = 'https://www.myntra.com/?utm_source=perf_google_search_brand&utm_medium=perf_google_search_brand&utm_campaign=Search%20-%20Myntra%20Brand%20(India)&gclid=Cj0KCQjwsLWDBhCmARIsAPSL3_0Pbrsi3qX7FKidPFqlQAwFPSOwhNboyBPp51v0wKxKZ3mKgu-P1iUaAlxrEALw_wcB';">
+       PREVIOUS<span class="	fa fa-angle-double-left" style="margin-left: 20px;"></span>
+    </button>
+</center>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+<style>
+     /* Media query to set website layout 
+            according to screen size */
+@media screen and (max-width:600px) 
+{   .ABC {
+            width: 50%;
+         }
+}
+@media screen and (max-width:400px) 
+{
+    .navbar-header {
+                    width: 100%;
+                }
+}
+
+ input[type=text] {
+  float: right;
+  padding: 12px;
+  border: none;
+  margin-top: 16px;
+  margin-right: 6px;
+  font-size: 12px;
+}
+.search-container {
+  position: relative;
+  display: flex;
+  min-width: 100px;
+}
+
+ .search-container button {
+  padding: 6px 10px;
+  margin-top: 16px;
+  margin-right: 110px;
+  background: #ddd;
+  font-size: 17px;
+  cursor: pointer;
+  height: 40px;
+}
+
+.search {
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 40px;
+    padding: 2px 23px 2px 30px;
+    background-color: #f5f5f5;
+    margin-left: 110px;
+    width: 100%;
+  }
+
+  .fa fa-search {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    width: 10px;
+    cursor: pointer;
+  }
+
+.ABC{
+    margin:5px;
+    border:1px solid #ccc;
+    float:left;
+    width:180px;
+        }
+
+.columnA {
+    float: left;
+    width: 31%;
+    margin-top: 1px;
+    text-align:justify;
+    margin-left:450px;
+    font-family: 'Segoe UI';
+    }
+
+.box{
+    font-size: 20px ;
+    font-weight:bold;
+    border:1px  black;
+    
+}
+
+
+p{
+    margin-top: 15px;
+    font-family: 'Segoe UI';
+    word-spacing: 5px;
+}
+h7{
+    font-family: 'Segoe UI';
+    font-weight:bold; 
+    margin-top:120px;
+}
+
+.danger
+{   background-color: white;
+    font-family: 'Segoe UI';
+    font-weight:bold; 
+    border-color: #f44336;
+    color: red;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.danger:hover {
+  background: #f44336;
+  color: white;
+}
+.enter{ border: 1px solid grey;
+    border-radius: 5px;
+    height: 40px;
+    padding: 20px 23px 2px 30px;
+    background-color: #f5f5f5;
+    margin-left: 110px;
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+.button2{
+    margin-top:20px;
+     border: 0px solid #121213;
+     background: rgb(26, 180, 15);
+     padding: 3px 21px;
+     border-radius: 16px;
+     font-size: 20px;
+     font-weight:bold;
+     font-family: 'Segoe UI';
+     letter-spacing: 2px;
+}
+.button2:hover{
+  font-weight:bold;
+     font-family: 'Segoe UI';
+ 
+}
+h4{
+    color:rgb(247, 9, 9);
+    font-weight:bold;
+    font-family: 'Segoe UI';
+    letter-spacing: 5px;
+    margin-left: 4px;
+    margin-top: 5px;
+
+}
+
+</style>
+</head>
+<body>
+<!--webistes navbar-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" >
+            <img src="MYNTRA.JPG.jpg" width="50" height="40" alt="logo">
+        </a>
+    </div>
+    <!--website content-->
+    <ul class="nav navbar-nav" style="font-size: 20px; font-family:Times New Roman; padding:10px; font-weight:bold;">
+        <li><a href="#">Men  </a></li>
+        <li><a href="#">Women </a></li>
+        <li><a href="#">Kids </a></li>
+        <li><a href="#">Home&Living </a></li>
+        <li><a href="#">Offers </a></li>
+      </ul>
+      <!--navbar right side glyphicons-->
+    <ul class="nav navbar-nav navbar-right">
+    <li><a href="#"><i class="glyphicon glyphicon-share"style="font-size:28px; color:black;"></i></a></li>
+    <li><a href="#"><i class="glyphicon glyphicon-heart-empty"style="font-size:28px; color:black;"></i></a></li>
+    <li><a href="#"><i class="glyphicon glyphicon-shopping-cart"style="font-size:28px; color:black"></i></a></li>
+    </ul>
+    <!--search bar nav-->
+        <div class="search-container" >
+            <input class="search" placeholder="Search for products,brands and" type="text">
+            <button type="submit"><i class="fa fa-search" ></i></button>
+        </div>
+      
+      
+</div>
+</nav>
+<!--left side product display-->
+    <div class = "row">
+        <div class="ABC">
+        <img src="purse.jpg.jpeg" width="600" height="500" alt="purse">
+        </div>
+        <!--brand name and rating-->
+        <div class = "columnA">
+            <h2>H&M</h2>
+            <h6>Tan Textured Shoulder Bag.</h6>
+        <div class="box">
+            <button type="button" class="btn btn-default" style="margin-top: 5px; font-weight: bold;">4.2
+            <a href="#"><i class="glyphicon glyphicon-star"style="font-size:15px; color:black;"></i></a>
+        </button>
+        <!--displaying some feature-->
+        </div>
+        <hr size="2" width="300%" color="grey" margin-top="1px"> 
+        <h2>Rs. 1299</h2>
+        <h5 style="color:green">inclusive of all taxes</h5>
+        <button type="button" title="STANDARD SIZE" class="danger">SELECT SIZE</button><br>
+        <button type="button" class="btn btn-danger" style="word-spacing: 10px; font-family: 'Segoe UI';font-weight:bold; margin-top:15px;">
+            <a href="#"><i class="glyphicon glyphicon-shopping-cart"style="font-size:18px; color:white"></i></a>
+                    ADD TO CART
+        </button>
+        <button type="button" class="btn btn-default" style="word-spacing: 10px;font-weight:bold; font-family: 'Segoe UI';margin-top:15px;">
+            <a href="#"><i class="glyphicon glyphicon-heart-empty"style="font-size:18px; color:black"></i></a>
+                  WISHLIST
+        </button>
+        <p style="font-weight: bold;">DELIVERY OPTIONS
+            <i class="fa fa-truck" aria-hidden="true" font-size="5px"></i></p>
+            <input class="enter" placeholder="Enter a PIN code" type="text">
+
+            <div class="further">
+            <p>100% Original Products<br>
+            Free Delivery on order above Rs. 799<br>
+            Pay on delivery might be available<br>
+            Easy 30 days returns and exchanges<br>
+            Try & Buy might be available</p>
+            <!--Navigate button-->
+        <button class="button2" title="LIST NEARBY STORES" onclick="myFunction();yesFunction();noFunction();">
+            <a href="file:///C:/Users/Shivangi/Desktop/htmll/MAP.HTML" 
+            target="_blank" style="color: black;">NAVIGATE</a>
+            <span class="glyphicon glyphicon-search" style="margin-left: 2px; color: black;"></span>
+</button>
+   <h5 id="demo2" style="color: red; letter-spacing: 2px; font-weight: bold;"></h5>       
+   <button onclick=" generateOTP();box();" id="demo" style="visibility:hidden;"></button>
+<script>
+function myFunction() {
+  document.getElementById("demo").style.visibility="visible";
+
+}</script>
+ <script>  
+    function myFunction()
+     {  document.getElementById("demo2").innerHTML = "!WARNING!"; }
+    function yesFunction() 
+    {    document.getElementById("demo").innerHTML = "Click on YES I'M IN only if you want to visit the store.";  }
+    function noFunction()
+    {    document.getElementById("demo").style.visibility="visible"; } 
+// Function to generate OTP
+    function generateOTP()
+    {
+        let OTP=0;
+        while(OTP<999)
+        {
+            OTP=Math.floor(Math.random()*10000);
+        }
+        document.getElementById("otp_text").innerHTML="Your Unique code is:  "+OTP;
+        document.getElementById("otp_text").style.visibility="visible";
+        
+        
+    }
+
+    function box()
+    {document.getElementById("dialogue").innerHTML="! TIP !: 1. This  Code will help you at time of visiting brand outlet.<br>2.: Call the OUTLET before you visit to check they have what you want.";
+    document.getElementById("dialogue").style.visibility="visible";}
+    
+</script>
+        <p id="otp_text" style="visibility: hidden; font-weight: bold;"></p>
+        <p id="dialogue" style="visibility: hidden; font-weight: bold; color:chartreuse; background-color: black;"></p>
+</div>
+</div>
+</div>
+</body>
+</html>      
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<title>QR Code Generator</title>
+<head>
+<!-- Include Bootstrap for styling -->
+<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+
+<style>
+.qr-code {
+	max-width: 200px;
+	margin: 10px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="text-center">
+
+	<!-- Get a Placeholder image initially,this will change according to the data entered later -->
+	<img src="myntra2.jpg" style="margin-top: 100px; width=100%;" class="qr-code img-thumbnail img-responsive" />
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<!-- Button to generate QR Code for-->
+		<button type="button" class="btn btn-default" id="generate" value="payment" 
+		style="margin-left:370px; margin-top:100px; font-family: 'Segoe UI';font-weight:bold; font-size:15px;">PAYMENT</button>
+		</div>
+	</div>
+	</div>
+</div>
+<script src= "https://code.jquery.com/jquery-3.5.1.js"> </script>
+
+<script>
+	// Function to QR encode the text
+	function QrCode(value) {
+		return $('<div/>').text(value).html();
+	}
+	$(function () {
+		// Specify click on payment
+	$('#generate').click(function () {
+		// Generate the link that would be used to generate the QR Code with the given data
+		let finalURL ='https://chart.googleapis.com/chart?cht=qr&chl=' +QrCode($('#generate').val()) +'&chs=160x160&chld=L|0'
+		$('.qr-code').attr('src', finalURL);
+	});
+	});
+</script>
+</body>
+</html>

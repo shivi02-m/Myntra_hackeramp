@@ -1,0 +1,61 @@
+<html>
+<head>
+<title> ACCESS </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script>
+   <!--code for verifcation of password-->
+function verifyPassword() {
+  document.getElementById("demo").style.visibility="hidden";
+  document.getElementById("message").style.color="red";
+  var pw = document.getElementById("pswd").value;
+  if(pw == "") {
+     document.getElementById("message").innerHTML = "Fill the code please!";
+     return false;
+  }
+ 
+  if(pw.length > 4) {
+     document.getElementById("message").innerHTML = "Code Entered Is Invalid";
+     return false;
+  } if(pw.length==4)
+      {
+  document.getElementById("message").innerHTML = "Code is verified!";
+  document.getElementById("message").style.color="green";
+  document.getElementById("demo").innerHTML = "CUSTOMER DETAILS <br>NAME: XYZ <br> BRAND NAME: H&M  <br> PRODUCT NAME: Tan Textured Shoulder Bag. <br> SIZE: FREE ";
+  document.getElementById("demo").style.visibility="visible";
+  return false;
+}
+}
+</script>
+<style>
+    
+    p{
+        font-weight:bold;
+         font-family:'Times New Roman';
+          margin-top: 15px;
+    }
+</style>
+</head>
+<body style="background-color: pink;">
+<center>
+<h1 style="color:black; margin-top: 150px; font-family: 'Segoe UI';font-weight:bold;">UNIQUE CODE</h1>
+<form onsubmit ="return verifyPassword()">
+<!-- Enter Password -->
+<p> Enter 4 digit unique code: <input type = "password" id = "pswd" value = ""> </p>
+<span id = "message" style="color:red; font-family: 'Segoe UI';font-weight:bold; font-size:30px;"> </span> <br><br>
+
+<!-- Click to verify valid password -->
+<button style="font-family: 'Segoe UI';font-weight:bold; font-size:15px;" >Submit</button>
+<!-- Click to reset fields -->
+<button type = "reset" value = "Reset" style="font-family: 'Segoe UI';font-weight:bold; font-size:15px;"  >Reset</button><br>
+<!-- Click for payment-->
+<p id="demo" style="visibility: hidden; font-weight: bold; font-family: 'Segoe UI; font-size:15px;"></p>
+</form>
+</center>
+</body>
+</html>
